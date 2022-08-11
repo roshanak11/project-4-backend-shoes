@@ -24,6 +24,12 @@ class ShoeModel(db.Model, BaseModel):
     in_stock = db.Column(db.Boolean, nullable=False)
     price = db.Column(db.Integer, nullable=False)
 
+    # ! Add a foreign key column to shoe. with user_id
+    user_id = db.Column(db.Integer, db.ForeignKey("users.id", ondelete='CASCADE'), nullable=False)
+
+   #DELETE # ! Letting flask-sqlalchemy know about my new table for category_shoe
+   #DELETE # ! This is similar to relationship for reviews, but we tell
+   #DELETE # ! it about the JOIN TABLE.
     # ! use the ShoeCategoryModel
     categories = db.relationship('ShoeCategoryModel', back_populates="shoe")
 
@@ -34,5 +40,8 @@ class ShoeModel(db.Model, BaseModel):
     # # ! 2 models
     # # ? backref should be the table name of this current table.
     reviews = db.relationship("ReviewModel", backref="reviews", cascade="all, delete")
-   
-  
+    # ! Add a user relationship to shoes
+    # ! Make up a new backref for comment users, it can't be users because that backref exists already elsewhere
+    user = db.relationship('UserModel', backref='users')
+
+    
