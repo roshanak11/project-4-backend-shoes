@@ -15,15 +15,6 @@ class ReviewModel(db.Model, BaseModel):
     # ! You give it the Primary Key of the shoes table. shoes.id
     shoe_id = db.Column(db.Integer, db.ForeignKey("shoes.id", ondelete='CASCADE'), nullable=False)
 
-
-    # ! Moved the relationship to models/shoe.py
-    # # ! This line is for serialization. Tells our comment about our shoe model
-    # # ! Associates 2 models together
-    # # ! It won't make a new column, but instead, specifies a relationship between
-    # # ! 2 models
-    # # ? backref should be the table name of this current table.
-    # barbie = db.relationship("ShoeModel", backref="reviews")
-
     # ! Add a foreign key column to barbie. with user_id
     user_id = db.Column(db.Integer, db.ForeignKey("users.id", ondelete='CASCADE'), nullable=False)
 

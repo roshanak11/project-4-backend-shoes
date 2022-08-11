@@ -14,7 +14,6 @@ class ShoeCategoryModel(db.Model, BaseModel):
 
     shoe_id = db.Column(db.Integer, db.ForeignKey("shoes.id"))
     category_id = db.Column(db.Integer, db.ForeignKey("categories.id"))
-    quantity = db.Column(db.Integer())
 
     shoe = db.relationship("ShoeModel", back_populates="categories")
     category = db.relationship("CategoryModel", back_populates="shoes")

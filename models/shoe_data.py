@@ -15,10 +15,10 @@ shoes_list = [
 
 # ! Specifying the required column, the user_id, and it must exist because we seed users before everything else.
 categories_list = [
-    ShoeModel(name="pink heels", image="", description="", in_stock=True, user_id=1),
-    ShoeModel(name="pink sandal", image="", description="", in_stock=True, user_id=1),
-    ShoeModel(name="black high heel boots", image="", description="", in_stock=True, user_id=1),
-    ShoeModel(name="black booties", image="", description="", in_stock=False, user_id=1)
+    ShoeModel(name="pink heels", image="https://res.cloudinary.com/dgicm5dgb/image/upload/v1660241098/project-4-shoes/pink-heels_yvz4eb.jpg", description="pink heels", price=80, in_stock=True, user_id=1),
+    ShoeModel(name="pink sandal", image="https://res.cloudinary.com/dgicm5dgb/image/upload/v1660241350/project-4-shoes/pink-sandals_cf3h77.jpg", description="pink sandal", price=100, in_stock=True, user_id=1),
+    ShoeModel(name="black high heel boots", image="https://res.cloudinary.com/dgicm5dgb/image/upload/v1660241345/project-4-shoes/black-high-heel-boots_uriaol.jpg", description="black high heel boots", price=120, in_stock=True, user_id=1),
+    ShoeModel(name="black booties", image="https://res.cloudinary.com/dgicm5dgb/image/upload/v1660241348/project-4-shoes/black-booties_wjbaoj.jpg", description="black booties", price=90, in_stock=False, user_id=1)
 ]
 
 # ! We now create this shoes_categories_list, which is responsible for creating the
