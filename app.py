@@ -4,11 +4,11 @@ from flask_marshmallow import Marshmallow
 # ! import Bcrypt.
 from flask_bcrypt import Bcrypt
 
-from config.environment import db_URI
-
 ...
 from flask_cors import CORS
 ...
+
+from config.environment import db_URI
 
 # ? Instantiate flask
 # ? __name__ is going to be a different value depending on
