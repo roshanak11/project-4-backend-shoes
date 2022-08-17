@@ -6,6 +6,10 @@ from flask_bcrypt import Bcrypt
 
 from config.environment import db_URI
 
+...
+from flask_cors import CORS
+...
+
 # ? Instantiate flask
 # ? __name__ is going to be a different value depending on
 # ? where you run flask from. If you run this directly,
@@ -26,3 +30,8 @@ from controllers import shoes, categories, users
 app.register_blueprint(shoes.router, url_prefix="/api")
 app.register_blueprint(categories.router, url_prefix="/api")
 app.register_blueprint(users.router, url_prefix="/api")
+
+
+# Deployment
+app = Flask(__name__)
+CORS(app)
