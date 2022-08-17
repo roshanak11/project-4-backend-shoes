@@ -33,5 +33,4 @@ app.register_blueprint(users.router, url_prefix="/api")
 
 
 # Deployment
-app = Flask(__name__)
 CORS(app)
