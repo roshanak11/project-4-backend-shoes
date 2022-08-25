@@ -77,7 +77,7 @@ shoes_categories_list = [
 ]
 
 
-# ! Specify the user_id on the ReviewModel
+# ! Here you specify the user_id on the ReviewModel
 reviews_list = [
   ReviewModel(content="This is a great review", shoe_id=1, user_id=1)
 ]
