@@ -34,5 +34,3 @@ with app.app_context():
     print("bye")
   except Exception as e:
     print(e)
-
-# Testing github update
