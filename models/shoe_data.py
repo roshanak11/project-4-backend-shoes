@@ -13,7 +13,7 @@ shoes_list = [
     CategoryModel(name="boot")
 ]
 
-# ! Specifying the required column, the user_id, and it must exist because we seed users before everything else.
+# ! Specifying the required column, the user_id, and it must exist because I seed users before everything else.
 categories_list = [
     ShoeModel(name="stacy", image="https://res.cloudinary.com/dgicm5dgb/image/upload/v1660241098/project-4-shoes/pink-heels_yvz4eb.jpg", description="pink heels", price=80, in_stock=True, user_id=1),
     ShoeModel(name="mandy", image="https://res.cloudinary.com/dgicm5dgb/image/upload/v1660751842/project-4-shoes/pink-crocs-sandal_u5k3a9.jpg", description="pink crocs", price=100, in_stock=True, user_id=1),
@@ -35,8 +35,8 @@ categories_list = [
     ShoeModel(name="cassie", image="https://res.cloudinary.com/dgicm5dgb/image/upload/v1661381492/project-4-shoes/tanheels_qinlo3.jpg", description="tan heels", price=100, in_stock=True, user_id=1)
 ]
 
-# ! We now create this shoes_categories_list, which is responsible for creating the
-# ! association, along with the quantity.
+# ! I now create this shoes_categories_list, which is responsible for creating the
+# ! association.
 shoes_categories_list = [
     ShoeCategoryModel(shoe_id=1, category_id=2), #pink heels #stacy
     ShoeCategoryModel(shoe_id=1, category_id=3), #pink heels #stacy
@@ -77,7 +77,7 @@ shoes_categories_list = [
 ]
 
 
-# ! Here you specify the user_id on the ReviewModel
+# ! Here I specify the user_id on the ReviewModel
 reviews_list = [
   ReviewModel(content="This is a great review", shoe_id=1, user_id=1)
 ]

@@ -30,7 +30,7 @@ def remove_category(category_id):
     category = CategoryModel.query.get(category_id)
 
     if not category:
-      return {"message": "Category found"}, HTTPStatus.NOT_FOUND
+      return {"message": "Category not found"}, HTTPStatus.NOT_FOUND
 
     category.remove()
 
