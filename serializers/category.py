@@ -7,7 +7,3 @@ class CategorySchema(ma.SQLAlchemyAutoSchema):
         model = CategoryModel
         load_instance = True
 
-# DELETE
-    # reviews = fields.Nested("ReviewSchema", many=True)
-    # # ! Add clothes
-    # clothes = fields.Nested("ClothingSchema", many=True)
