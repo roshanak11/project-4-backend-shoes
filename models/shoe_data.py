@@ -36,7 +36,7 @@ categories_list = [
 ]
 
 # ! We now create this shoes_categories_list, which is responsible for creating the
-# ! association, along with the quantity.
+# ! association.
 shoes_categories_list = [
     ShoeCategoryModel(shoe_id=1, category_id=2), #pink heels #stacy
     ShoeCategoryModel(shoe_id=1, category_id=3), #pink heels #stacy

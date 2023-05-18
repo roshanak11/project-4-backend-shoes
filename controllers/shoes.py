@@ -62,7 +62,7 @@ def get_single_shoe(shoe_id):
     
     # ! Empty dictionary -> Boolean gives you...False
     if not shoe:
-      # ! Return a tuple iwht message not found and status code.
+      # ! Return a tuple with message not found and status code.
       return {"message": "Shoe not found" }, HTTPStatus.NOT_FOUND
 
     return shoe_schema.jsonify(shoe), HTTPStatus.OK

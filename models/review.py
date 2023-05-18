@@ -15,7 +15,7 @@ class ReviewModel(db.Model, BaseModel):
     # ! You give it the Primary Key of the shoes table. shoes.id
     shoe_id = db.Column(db.Integer, db.ForeignKey("shoes.id", ondelete='CASCADE'), nullable=False)
 
-    # ! Add a foreign key column to barbie. with user_id
+    # ! Add a foreign key column to shoe. with user_id
     user_id = db.Column(db.Integer, db.ForeignKey("users.id", ondelete='CASCADE'), nullable=False)
 
     # ! Make up a new backref for comment users, it can't be
