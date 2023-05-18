@@ -27,7 +27,7 @@ with app.app_context():
     db.session.add_all(shoes_categories_list)
     db.session.commit()
 
-# ! This has to come after making shoes. Because I need shoes to comment on.
+    # ! This has to come after making shoes. Because I need shoes to comment on.
     db.session.add_all(reviews_list)
     db.session.commit()
   
