@@ -46,7 +46,7 @@ def get_shoes():
     # ! query has methods like .all, to interact with the database
 
     # ! Serializing to shoes json using .jsonify.
-    # ! many=True tells the serialiizer we are giving it a list of shoe models.
+    # ! many=True tells the serialiizer I am giving it a list of shoe models.
     return shoe_schema.jsonify(shoes, many=True), HTTPStatus.OK
 
 
@@ -55,12 +55,12 @@ def get_shoes():
 # ? TYPE is your type, e.g. int
 # ? PARAM_NAME is your parameter
 @router.route("/shoes/<int:shoe_id>")
-# ! Notice I'm passing the shoe_id as an argument.
+# ! I'm passing the shoe_id as an argument.
 def get_single_shoe(shoe_id):
     
     shoe = ShoeModel.query.get(shoe_id)
     
-    # ! Empty dictionary -> Boolean gives you...False
+    # ! Empty dictionary -> Boolean gives me...False
     if not shoe:
       # ! Return a tuple with message not found and status code.
       return {"message": "Shoe not found" }, HTTPStatus.NOT_FOUND
@@ -82,7 +82,7 @@ def create_shoe():
     try:
       # ! .load will deserialize dictionary -> ShoeModel
       shoe = shoe_schema.load(shoe_dictionary)
-    # ! Marshmallow provides validation error for you.
+    # ! Marshmallow provides validation error for me.
     except ValidationError as e:
       return { "errors": e.messages, "message": "Something went wrong" }
 
@@ -110,7 +110,7 @@ def update_shoe(shoe_id):
     if not existing_shoe:
         return {"message": "Shoe not found"}, HTTPStatus.NOT_FOUND
 
-    # ! Add this check whenever we want to make sure the shoe is the user's shoe that they're trying to update/delete
+    # ! Add this check whenever I want to make sure the shoe is the user's shoe that they're trying to update/delete
     if not g.current_user.id == existing_shoe.user_id:
         return{"message": "Not your Shoe!"}, HTTPStatus.UNAUTHORIZED
 
@@ -180,9 +180,9 @@ def update_review(shoe_id, review_id):
 
     try:
         review = review_schema.load(
-          review_dictionary, # ! All the fields you're changing
-          instance=existing_review, # ! Existing review you're updating
-          partial=True # ! This allows you to ONLY provide the fields you're changing
+          review_dictionary, # ! All the fields I'm changing
+          instance=existing_review, # ! Existing review I'm updating
+          partial=True # ! This allows me to ONLY provide the fields you're changing
         )
 
     except ValidationError as e:
@@ -233,7 +233,7 @@ def create_shoe_category(shoe_id, category_id):
         return {"message": "item not found"}, HTTPStatus.NOT_FOUND
 
     # ! This is possible because of the relationship field in ShoeModel
-    # ! Add the category to the sgie. This defines the relationship.
+    # ! Add the category to the shoe. This defines the relationship.
     shoe.categories.append(category)
 
     shoe.save()
