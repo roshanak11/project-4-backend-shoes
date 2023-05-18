@@ -35,11 +35,7 @@ categories_list = [
     ShoeModel(name="cassie", image="https://res.cloudinary.com/dgicm5dgb/image/upload/v1661381492/project-4-shoes/tanheels_qinlo3.jpg", description="tan heels", price=100, in_stock=True, user_id=1)
 ]
 
-<<<<<<< HEAD
-# ! We now create this shoes_categories_list, which is responsible for creating the
-=======
 # ! I now create this shoes_categories_list, which is responsible for creating the
->>>>>>> 82102a472c85204303de9e5c693f612980459e39
 # ! association.
 shoes_categories_list = [
     ShoeCategoryModel(shoe_id=1, category_id=2), #pink heels #stacy
