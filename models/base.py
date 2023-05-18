@@ -2,7 +2,11 @@
 from app import db
 from datetime import *
 
+<<<<<<< HEAD
+# ! Our first Flask SQLAlchemy model.
+=======
 # ! A Flask SQLAlchemy model.
+>>>>>>> 82102a472c85204303de9e5c693f612980459e39
 # ? - It is a class in python.
 # ? - Flask SQLAlchemy will create tables based on these models.
 # ? In other words, SQL is written for you.
